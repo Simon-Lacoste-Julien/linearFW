@@ -1,0 +1,43 @@
+There are already pre-compiled versions of the mex files in the solvers
+directory for Linux, Mac and Windows 64 bits, so the code might run
+fine as is in Matlab. Otherwise, you need first to compile the mex files:
+1) Go to the solvers directory, run "mex solver_video_mex.cpp"
+
+Then to launch the script, go back to this folder and:
+2) run "run_FW.m"
+
+***
+Code for image and video colocalization.
+
+This code uses the LMO code for shortest path in a network, provided by Armand Joulin and Kevin Tang.
+Copyright (c) 2014, Armand Joulin, Kevin Tang
+obtained from: http://ai.stanford.edu/~ajoulin/code/FW.zip
+(the solvers and data directory).
+
+If you use this code please cite:
+
+@inproceedings{JouTangFeiECCV14,
+  title     = {Efficient Image and Video Co-localization with Frank-Wolfe Algorithm},
+  author    = {Armand Joulin and Kevin Tang and Li Fei-Fei},
+  year      = {2014},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+}
+   
+@InProceedings{TangJouFeiCVPR14,
+    title = "Co-localization in Real-World Images",
+    booktitle = "Proceedings of the Conference on Computer Vision and Pattern Recognition (CVPR)",
+    author = "Kevin Tang, Armand Joulin, Li-Jia Li and Li Fei-Fei",
+    year = "2014"
+}
+
+The AFW.m function was based on their code, but then modified using a hashing
+function for the active set to be more efficient.
+
+The FW, PFW and AFW code were modified by:
+Simon Lacoste-Julien and Martin Jaggi
+@inproceedings{lacosteNIPS15fw,
+  title     = {On the Global Linear Convergence of {F}rank-{W}olfe Optimization Variants},
+  author    = {Simon Lacoste-Julien and Martin Jaggi},
+  year      = {2015},
+  booktitle = {NIPS},
+}
