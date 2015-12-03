@@ -101,11 +101,11 @@ while it <= opts.Tmax
   gap_values(it-1) = gap;
   
   if opts.verbose
-      fprintf('it = %d -  f = %f - gap=%f\n', it, f_t, gap);
+      fprintf('it = %d -  f = %g - gap=%g\n', it, f_t, gap);
   end
 
   if gap < opts.TOL
-    fprintf('end of PFW: reach small duality gap (gap=%f)\n', gap);
+    fprintf('end of PFW: reach small duality gap (gap=%g)\n', gap);
     break
   end 
   
@@ -134,7 +134,7 @@ while it <= opts.Tmax
       number_drop = number_drop+1;
   end
 
-  if step < eps
+  if step < -eps
       % not a descent direction???
       fprintf('ERROR -- not descent direction???')
       keyboard
