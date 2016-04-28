@@ -77,10 +77,6 @@ while it <= opts.Tmax
     %stepSize = 2 / (t+2);
   step = max(0, min(step, max_step ));
   
-  if abs(step - max_step) < 10*eps
-      number_drop = number_drop+1;
-  end
-  
   if opts.verbose
       fprintf('it = %d -  f = %g - gap=%g - stepsize=%g\n', it, f_t, gap, step);
   end
