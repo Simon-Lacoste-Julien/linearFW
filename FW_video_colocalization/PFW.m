@@ -129,10 +129,6 @@ while it <= opts.Tmax
 
   step = -  (grad' * d) / ( d' * A * d );
   step = max(0, min(step, max_step ));
-  
-  if abs(step - max_step) < 10*eps
-      number_drop = number_drop+1;
-  end
 
   if step < -eps
       % not a descent direction???
